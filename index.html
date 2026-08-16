@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8" />
 
@@ -10,6 +10,10 @@
 
   <title>SLOOP</title>
 
+  <!-- =====================================================
+       FONTS
+  ====================================================== -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
 
   <link
@@ -19,7 +23,7 @@
   />
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;400;500&display=swap"
     rel="stylesheet"
   />
 
@@ -53,8 +57,14 @@
     }
 
     body {
-      font-family: "Cormorant Garamond", Georgia, serif;
+      font-family:
+        "Cormorant Garamond",
+        "Noto Serif JP",
+        Georgia,
+        serif;
+
       color: var(--ink);
+
       overflow-x: hidden;
     }
 
@@ -72,6 +82,7 @@
       position: relative;
 
       width: 100%;
+
       min-height: 100vh;
       min-height: 100svh;
 
@@ -125,9 +136,6 @@
     .brand {
       position: absolute;
 
-      /*
-       * Exact reference positioning
-       */
       left: 30%;
 
       top: 22.3%;
@@ -168,6 +176,11 @@
     ====================================================== */
 
     .brand-name {
+      font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
       font-size: 0.80rem;
 
       font-weight: 500;
@@ -189,9 +202,6 @@
     .nav {
       position: absolute;
 
-      /*
-       * RIGHT-SIDE POSITION
-       */
       right: 5.5%;
 
       top: 51.5%;
@@ -203,9 +213,10 @@
       align-items: flex-start;
 
       /*
-       * Reduced negative vertical space.
+       * Increased spacing between each
+       * navigation item.
        */
-      gap: 1.15rem;
+      gap: 1.5rem;
 
       width: max-content;
 
@@ -226,10 +237,6 @@
 
       justify-content: flex-start;
 
-      /*
-       * Fixed relationship between ink
-       * and text.
-       */
       gap: 0.55rem;
 
       width: max-content;
@@ -261,53 +268,43 @@
     .nav-label {
       display: block;
 
-      /*
-       * Smaller editorial size.
-       */
+      font-family:
+        "Noto Serif JP",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
       font-size: 0.61rem;
 
-      font-weight: 500;
+      font-weight: 400;
 
       line-height: 1.05;
 
-      /*
-       * Reduced letter spacing.
-       */
-      letter-spacing: 0.10rem;
-
-      text-transform: uppercase;
+      letter-spacing: 0.055rem;
 
       text-align: left;
 
       white-space: nowrap;
 
-      /*
-       * Keeps text vertically centered
-       * with the ink line.
-       */
       transform: translateY(-0.02rem);
     }
 
 
     /* =====================================================
-       CATALOGUE TWO-LINE TEXT
+       CATALOGUE & LINESHEET
     ====================================================== */
 
     .nav-item:first-child .nav-label {
-      line-height: 0.95;
+      line-height: 1.18;
 
-      letter-spacing: 0.095rem;
+      letter-spacing: 0.045rem;
 
       transform: translateY(-0.08rem);
     }
 
 
     /* =====================================================
-       INK MARK CONTAINER
-
-       IMPORTANT:
-       All five marks have exactly the same
-       width and therefore remain aligned.
+       INK MARK
     ====================================================== */
 
     .nav-mark {
@@ -488,7 +485,7 @@
 
 
     /* =====================================================
-       WEBSITE
+       WEBSITE - SPLATTER
     ====================================================== */
 
     .nav-item:nth-child(3) .nav-mark {
@@ -632,7 +629,10 @@
         right: 8%;
         top: 59.5%;
 
-        gap: 1.7rem;
+        /*
+         * Increased vertical breathing space
+         */
+        gap: 1.8rem;
       }
 
       .nav-mark {
@@ -642,11 +642,11 @@
 
       .nav-label {
         font-size: 0.78rem;
-        letter-spacing: 0.15rem;
+        letter-spacing: 0.06rem;
       }
 
       .nav-item:first-child .nav-label {
-        letter-spacing: 0.14rem;
+        letter-spacing: 0.05rem;
       }
 
       .page::after {
@@ -680,7 +680,10 @@
         right: 7%;
         top: 57%;
 
-        gap: 1.5rem;
+        /*
+         * Increased spacing
+         */
+        gap: 1.65rem;
       }
 
       .nav-item {
@@ -694,7 +697,7 @@
 
       .nav-label {
         font-size: 0.69rem;
-        letter-spacing: 0.13rem;
+        letter-spacing: 0.055rem;
       }
 
       .page::after {
@@ -728,7 +731,10 @@
         right: 6%;
         top: 54%;
 
-        gap: 1.3rem;
+        /*
+         * More space between each item
+         */
+        gap: 2.0rem;
       }
 
       .nav-item {
@@ -742,11 +748,11 @@
 
       .nav-label {
         font-size: 0.66rem;
-        letter-spacing: 0.115rem;
+        letter-spacing: 0.05rem;
       }
 
       .nav-item:first-child .nav-label {
-        letter-spacing: 0.105rem;
+        letter-spacing: 0.045rem;
       }
 
       .page::after {
@@ -780,7 +786,10 @@
         right: 5.5%;
         top: 51.5%;
 
-        gap: 1.15rem;
+        /*
+         * Increased from 1.15rem to 1.5rem
+         */
+        gap: 2.0rem;
       }
 
       .nav-item {
@@ -794,11 +803,11 @@
 
       .nav-label {
         font-size: 0.61rem;
-        letter-spacing: 0.10rem;
+        letter-spacing: 0.045rem;
       }
 
       .nav-item:first-child .nav-label {
-        letter-spacing: 0.095rem;
+        letter-spacing: 0.04rem;
       }
 
       .page::after {
@@ -832,7 +841,11 @@
         right: 5%;
         top: 51%;
 
-        gap: 1rem;
+        /*
+         * Increased spacing while keeping
+         * the navigation compact.
+         */
+        gap: 2.0rem;
       }
 
       .nav-item {
@@ -846,7 +859,7 @@
 
       .nav-label {
         font-size: 0.57rem;
-        letter-spacing: 0.085rem;
+        letter-spacing: 0.04rem;
       }
 
       .page::after {
@@ -888,20 +901,23 @@
 
 
     <!-- ===================================================
-         NAVIGATION
+         JAPANESE NAVIGATION
     ==================================================== -->
 
     <nav
       class="nav"
-      aria-label="Main navigation"
+      aria-label="メインナビゲーション"
     >
+
+
+      <!-- CATALOGUE & LINESHEET -->
 
       <a
         class="nav-item"
         href="https://drive.google.com/drive/folders/1IR81Rx1yDNQZYB8iVKQafBD5qyWWlotR"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Catalogue and Linesheet"
+        aria-label="カタログとラインシート"
       >
 
         <span
@@ -910,17 +926,19 @@
         ></span>
 
         <span class="nav-label">
-          Catalog &amp;<br />
-          Linesheet
+          カタログ＆<br>
+          ラインシート
         </span>
 
       </a>
 
+
+      <!-- JOURNAL -->
 
       <a
         class="nav-item"
         href="https://slooplife.com/ja/blogs/news"
-        aria-label="Journal"
+        aria-label="ジャーナル"
       >
 
         <span
@@ -929,18 +947,20 @@
         ></span>
 
         <span class="nav-label">
-          Journal
+          ジャーナル
         </span>
 
       </a>
 
+
+      <!-- WEBSITE -->
 
       <a
         class="nav-item"
         href="https://slooplife.com/ja"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Website"
+        aria-label="ウェブサイト"
       >
 
         <span
@@ -949,16 +969,18 @@
         ></span>
 
         <span class="nav-label">
-          Website
+          ウェブサイト
         </span>
 
       </a>
 
+
+      <!-- CONTACT -->
 
       <a
         class="nav-item"
         href="https://slooplife.com/pages/partners-form"
-        aria-label="Contact"
+        aria-label="お問い合わせ"
       >
 
         <span
@@ -967,18 +989,20 @@
         ></span>
 
         <span class="nav-label">
-          Contact
+          お問い合わせ
         </span>
 
       </a>
 
+
+      <!-- SOCIALS -->
 
       <a
         class="nav-item"
         href="https://www.instagram.com/sloop_life?igsh=ejR5azdjcDducndz"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Socials"
+        aria-label="SNS"
       >
 
         <span
@@ -987,10 +1011,11 @@
         ></span>
 
         <span class="nav-label">
-          Socials
+          SNS
         </span>
 
       </a>
+
 
     </nav>
 
